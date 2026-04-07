@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-6'}`}>
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <div className="flex flex-col leading-none">
             <span className={`text-xs uppercase tracking-[0.3em] font-medium ${isScrolled ? 'text-gold' : 'text-white/80'}`}>Sala Bankietowa</span>
@@ -88,24 +88,24 @@ const Hero = () => {
         />
       </motion.div>
       
-      <div className="relative z-10 text-center px-6 max-w-4xl">
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <span className="text-gold uppercase tracking-[0.5em] font-medium mb-4 block">Witamy w Fantazji</span>
-          <h1 className="text-5xl md:text-8xl text-white font-serif italic mb-8 leading-tight text-shadow-elegant">
+          <h1 className="text-4xl sm:text-5xl md:text-8xl text-white font-serif italic mb-8 leading-tight text-shadow-elegant">
             Twoje Wymarzone <br /> Przyjęcie
           </h1>
-          <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+          <p className="text-white/80 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed">
             Miejsce, w którym wyjątkowe chwile nabierają eleganckiej oprawy
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#oferta" className="bg-gold text-white px-10 py-4 rounded-full font-bold hover:bg-gold/90 transition-all shadow-xl flex items-center justify-center gap-2">
+            <a href="#oferta" className="bg-gold text-white px-8 sm:px-10 py-4 rounded-full font-bold hover:bg-gold/90 transition-all shadow-xl flex items-center justify-center gap-2 text-sm sm:text-base">
               Nasza Oferta <ChevronRight size={18} />
             </a>
-            <a href="#kontakt" className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-full font-bold hover:bg-white/20 transition-all flex items-center justify-center">
+            <a href="#kontakt" className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 sm:px-10 py-4 rounded-full font-bold hover:bg-white/20 transition-all flex items-center justify-center text-sm sm:text-base">
               Skontaktuj się
             </a>
           </div>
@@ -128,8 +128,8 @@ const Hero = () => {
 const About = () => {
   return (
     <section id="o-nas" className="py-24 bg-cream overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -137,7 +137,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="text-gold font-medium uppercase tracking-widest mb-4 block">O nas</span>
-            <h2 className="text-4xl md:text-5xl font-serif mb-8 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-8 leading-tight">
               Elegancja i Tradycja <br /> w Nowoczesnym Wydaniu
             </h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
@@ -213,10 +213,10 @@ const Services = () => {
 
   return (
     <section id="oferta" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <span className="text-gold font-medium uppercase tracking-widest mb-4 block">Nasze Usługi</span>
-          <h2 className="text-4xl md:text-5xl font-serif">Co Organizujemy?</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif">Co Organizujemy?</h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -262,10 +262,10 @@ const Gallery = () => {
 
   return (
     <section id="galeria" className="py-24 bg-cream">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <span className="text-gold font-medium uppercase tracking-widest mb-4 block">Galeria</span>
-          <h2 className="text-4xl md:text-5xl font-serif">Zobacz Nasze Wnętrza</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif">Zobacz Nasze Wnętrza</h2>
         </div>
 
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
@@ -295,7 +295,7 @@ const Gallery = () => {
 const Reviews = () => {
   return (
     <section id="opinie" className="py-24 bg-gray-50 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -310,21 +310,21 @@ const Reviews = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-serif font-bold italic mt-4 text-dark"
+            className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold italic mt-4 text-dark"
           >
             Opinie naszych Gości
           </motion.h2>
           <div className="w-24 h-1 bg-gold mx-auto mt-6" />
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="lg:w-1/2"
           >
-            <p className="text-xl text-gray-600 leading-relaxed mb-8 italic">
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 italic">
               "Najlepsza sala w okolicy! Jedzenie przepyszne, obsługa na najwyższym poziomie, a wystrój zapiera dech w piersiach. Nasze wesele było dokładnie takie, jak sobie wymarzyliśmy."
             </p>
             <div className="flex items-center gap-4 mb-8">
@@ -340,7 +340,7 @@ const Reviews = () => {
               href="https://www.facebook.com/SalaBankietowaFantazja/reviews/?id=100046418004395&sk=reviews"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#1877F2] text-white px-8 py-4 rounded-full font-bold hover:bg-[#166fe5] transition-all shadow-lg"
+              className="inline-flex items-center justify-center gap-2 bg-[#1877F2] text-white px-6 md:px-8 py-4 rounded-full font-bold hover:bg-[#166fe5] transition-all shadow-lg w-full sm:w-auto text-sm md:text-base"
             >
               <Facebook size={20} />
               Zobacz wszystkie opinie na Facebooku
@@ -376,54 +376,54 @@ const Reviews = () => {
 const Contact = () => {
   return (
     <section id="kontakt" className="py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
             <span className="text-gold font-medium uppercase tracking-widest mb-4 block">Kontakt</span>
-            <h2 className="text-4xl md:text-5xl font-serif mb-8">Zaplanujmy Razem Twoje Wydarzenie</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-8">Zaplanujmy Razem Twoje Wydarzenie</h2>
             
             <div className="space-y-8">
-              <div className="flex items-center gap-6">
-                <div className="bg-gold text-white p-4 rounded-full">
+              <div className="flex items-center gap-4 sm:gap-6">
+                <div className="bg-gold text-white p-3 sm:p-4 rounded-full">
                   <Phone size={24} />
                 </div>
                 <div>
                   <p className="text-sm text-gray-500 uppercase tracking-widest">Telefon</p>
-                  <a href="tel:532841084" className="text-xl font-bold hover:text-gold transition-colors">532 841 084</a>
+                  <a href="tel:532841084" className="text-lg sm:text-xl font-bold hover:text-gold transition-colors">532 841 084</a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-6">
-                <div className="bg-gold text-white p-4 rounded-full">
+              <div className="flex items-center gap-4 sm:gap-6">
+                <div className="bg-gold text-white p-3 sm:p-4 rounded-full">
                   <Mail size={24} />
                 </div>
                 <div>
                   <p className="text-sm text-gray-500 uppercase tracking-widest">Email</p>
-                  <a href="mailto:salabankietowafantazja@gmail.com" className="text-xl font-bold hover:text-gold transition-colors">salabankietowafantazja@gmail.com</a>
+                  <a href="mailto:salabankietowafantazja@gmail.com" className="text-lg md:text-xl font-bold hover:text-gold transition-colors break-all">salabankietowafantazja@gmail.com</a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-6">
-                <div className="bg-gold text-white p-4 rounded-full">
+              <div className="flex items-center gap-4 sm:gap-6">
+                <div className="bg-gold text-white p-3 sm:p-4 rounded-full">
                   <MapPin size={24} />
                 </div>
                 <div>
                   <p className="text-sm text-gray-500 uppercase tracking-widest">Adres</p>
-                  <p className="text-xl font-bold">Konary 24, Kutno, Polska</p>
+                  <p className="text-lg sm:text-xl font-bold">Konary 24, Kutno, Polska</p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-12 flex gap-4">
+            <div className="mt-8 sm:mt-12 flex gap-4">
               <a 
                 href="https://www.facebook.com/SalaBankietowaFantazja/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-gray-100 p-4 rounded-full text-dark hover:bg-gold hover:text-white transition-all"
+                className="bg-gray-100 p-3 sm:p-4 rounded-full text-dark hover:bg-gold hover:text-white transition-all"
               >
                 <Facebook size={24} />
               </a>
@@ -434,7 +434,7 @@ const Contact = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="h-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white relative"
+            className="h-[300px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white relative"
           >
             {/* Mock Map Placeholder */}
             <div className="w-full h-full bg-gray-200 flex items-center justify-center relative">
@@ -444,15 +444,15 @@ const Contact = () => {
                 alt="Map Background"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 sm:p-8">
                 <MapPin size={48} className="text-gold mb-4 animate-bounce" />
-                <h3 className="text-2xl font-serif italic mb-2">Znajdź nas w Konarach</h3>
-                <p className="text-gray-600 mb-6">Tylko 10 minut od centrum Kutna</p>
+                <h3 className="text-xl sm:text-2xl font-serif italic mb-2">Znajdź nas w Konarach</h3>
+                <p className="text-gray-600 text-sm sm:text-base mb-6">Tylko 10 minut od centrum Kutna</p>
                 <a 
                   href="https://maps.app.goo.gl/4SoqdD3tEoYLTCYp8" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-dark text-white px-8 py-3 rounded-full font-bold hover:bg-gold transition-all"
+                  className="bg-dark text-white px-6 sm:px-8 py-3 rounded-full font-bold hover:bg-gold transition-all text-sm sm:text-base"
                 >
                   Otwórz w Mapach Google
                 </a>
@@ -468,7 +468,7 @@ const Contact = () => {
 const Footer = () => {
   return (
     <footer className="bg-dark text-white py-16">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-2">
             <div className="flex flex-col leading-none mb-6">
@@ -493,7 +493,7 @@ const Footer = () => {
 
           <div>
             <h4 className="font-bold mb-6 uppercase tracking-widest text-sm">Godziny Kontaktu</h4>
-            <ul className="space-y-4 text-gray-400">
+            <ul className="space-y-4 text-gray-400 text-sm">
               <li className="flex justify-between"><span>Pon - Pt:</span> <span>09:00 - 20:00</span></li>
               <li className="flex justify-between"><span>Sobota:</span> <span>10:00 - 18:00</span></li>
               <li className="flex justify-between"><span>Niedziela:</span> <span>Zamknięte</span></li>
