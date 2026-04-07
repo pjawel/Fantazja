@@ -17,6 +17,7 @@ const Navbar = () => {
     { name: 'O nas', href: '#o-nas' },
     { name: 'Oferta', href: '#oferta' },
     { name: 'Galeria', href: '#galeria' },
+    { name: 'Opinie', href: '#opinie' },
     { name: 'Kontakt', href: '#kontakt' },
   ];
 
@@ -291,6 +292,87 @@ const Gallery = () => {
   );
 };
 
+const Reviews = () => {
+  return (
+    <section id="opinie" className="py-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-gold font-bold uppercase tracking-[0.3em] text-sm"
+          >
+            Nasze Referencje
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-5xl font-serif font-bold italic mt-4 text-dark"
+          >
+            Opinie naszych Gości
+          </motion.h2>
+          <div className="w-24 h-1 bg-gold mx-auto mt-6" />
+        </div>
+
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="lg:w-1/2"
+          >
+            <p className="text-xl text-gray-600 leading-relaxed mb-8 italic">
+              "Najlepsza sala w okolicy! Jedzenie przepyszne, obsługa na najwyższym poziomie, a wystrój zapiera dech w piersiach. Nasze wesele było dokładnie takie, jak sobie wymarzyliśmy."
+            </p>
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center text-white font-bold text-xl">
+                M
+              </div>
+              <div>
+                <h4 className="font-bold text-dark">Marta i Tomasz</h4>
+                <p className="text-gray-500 text-sm">Wesele, Lipiec 2024</p>
+              </div>
+            </div>
+            <a
+              href="https://www.facebook.com/SalaBankietowaFantazja/reviews/?id=100046418004395&sk=reviews"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#1877F2] text-white px-8 py-4 rounded-full font-bold hover:bg-[#166fe5] transition-all shadow-lg"
+            >
+              <Facebook size={20} />
+              Zobacz wszystkie opinie na Facebooku
+            </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="lg:w-1/2 w-full flex justify-center"
+          >
+            <div className="bg-white p-4 rounded-2xl shadow-xl w-full max-w-[500px] overflow-hidden">
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSalaBankietowaFantazja%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                width="100%"
+                height="500"
+                style={{ border: 'none', overflow: 'hidden' }}
+                scrolling="no"
+                frameBorder="0"
+                allowFullScreen={true}
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                title="Facebook Page Plugin"
+              ></iframe>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Contact = () => {
   return (
     <section id="kontakt" className="py-24 bg-white">
@@ -404,6 +486,7 @@ const Footer = () => {
               <li><a href="#o-nas" className="hover:text-gold transition-colors">O nas</a></li>
               <li><a href="#oferta" className="hover:text-gold transition-colors">Oferta</a></li>
               <li><a href="#galeria" className="hover:text-gold transition-colors">Galeria</a></li>
+              <li><a href="#opinie" className="hover:text-gold transition-colors">Opinie</a></li>
               <li><a href="#kontakt" className="hover:text-gold transition-colors">Kontakt</a></li>
             </ul>
           </div>
@@ -436,6 +519,7 @@ export default function App() {
         <About />
         <Services />
         <Gallery />
+        <Reviews />
         <Contact />
       </main>
       <Footer />
