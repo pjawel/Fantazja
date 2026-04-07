@@ -294,7 +294,7 @@ const Gallery = () => {
 
 const Reviews = () => {
   return (
-    <section id="opinie" className="py-24 bg-gray-50">
+    <section id="opinie" className="py-24 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <motion.span
@@ -375,7 +375,7 @@ const Reviews = () => {
 
 const Contact = () => {
   return (
-    <section id="kontakt" className="py-24 bg-white">
+    <section id="kontakt" className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16">
           <motion.div
@@ -512,9 +512,9 @@ const Footer = () => {
 
 export default function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Navbar />
-      <main>
+      <main className="overflow-hidden">
         <Hero />
         <About />
         <Services />
